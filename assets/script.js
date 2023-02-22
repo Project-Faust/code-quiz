@@ -70,4 +70,11 @@ function nextSequence() {
     var currentQuestion = quizQuestions[questionSequence];
     questionEl.textContent = quizQuestions.currentQuestion;
 
+    // incremement questionSequence each time correct answer is selected
+    questionSequence++;
+
+    // if questionSequence > #questions THEN end quiz
+    if (questionSequence > quizQuestions.length) {
+        //end quiz, show score/submit screen
+    }
 };
