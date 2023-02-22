@@ -11,24 +11,23 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <button id="highscoreButton" onclick="window.location.href='highscores.html'"><strong>View Highscores</strong></button>
-        </nav>
+    <header id="top">
+            <button id="highscore-button"><strong>View
+                    Highscores</strong></button>
     </header>
-    <main class="flex-container">
+    <main id="landing" class="flex-container center">
         <h1 id="instructions-heading">Coding Quiz</h1>
         <h2 id="instructions-subheading">See what you know under pressure!</h2>
         <ol id="instructions">
             <li>Click the button below to start a short quiz on HTML, CSS, and JavaSctipt.</li>
-            <li >Each question will have a time limit of fifteen seconds.</li>
+            <li>Each question will have a time limit of fifteen seconds.</li>
             <li>Clicking on a correct answer will take you to the next question and reset the
                 timer.
             </li>
             <li>Clicking on an incorrect answer will deduct three seconds from the remaining time.</li>
         </ol>
         <p><strong>Good luck!</strong></p>
-        <button id="start-button"><strong>Start Quiz</strong></button> 
+        <button id="start-button"><strong>Start Quiz</strong></button>
     </main>
     <script src="./assets/script.js"></script>
 </body>
