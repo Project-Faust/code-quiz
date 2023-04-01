@@ -51,6 +51,11 @@ startBtn.addEventListener('click', function () {
     nextSequence();
 });
 
+highscoreBtn.addEventListener('click', function () {
+    landingEl.innerHTML = '';
+    showHiscorePage();
+});
+
 // puts succeeding sequence on page
 function nextSequence() {
     // conditionally renders next question or submit hiscore screen
@@ -141,13 +146,16 @@ function showSubmitHiscore() {
 
 function showHiscorePage() {
     landingEl.innerHTML = '';
-    timerEl.innerHTML = '';
+    // timerEl.innerHTML = '';
     const hiscoreHeading = document.createElement('h2');
     const hiscoreContainer = document.createElement('ul');
     landingEl.appendChild(hiscoreHeading);
     landingEl.appendChild(hiscoreContainer);
-    highscoreTable.forEach(function () {
+    highscoreTable.forEach(function (highscoreTable) {
         const hiscoreEntry = document.createElement('p');
         hiscoreContainer.appendChild(hiscoreEntry);
+        hiscoreEntry.innerHTML = highscoreTable.toUpperCase();
     });
 }
+
+console.log(highscoreTable)
